@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME</title>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="title"><h4>WELCOME TO THE SESSION</h4></div><br>
+
+		<div class="mainBox auto-fit">
+
+			<div class="leftCol">
+				<img src="./images/logo.png" width="100%">
+			</div>
+
+			
+
+			<div class="rightCol">
+
+				<form method="post" action="/home">
+
+					<div class="row">
+						<div class="input-field col s12">
+							<label>Name</label>
+							<input id="first_name" type="text" class="validate" name="name">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s12">
+							<select name="branch">
+								<option value="" disabled selected>SELECT BRANCH</option>
+								<option value="CSE M">CSE M</option>
+								<option value="CSE E">CSE E</option>
+								<option value="IT M">IT M</option>
+								<option value="IT E">IT E</option>
+								<option value="ECE 1">ECE 1</option>
+								<option value="ECE 2">ECE 2</option>
+								<option value="ECE E">ECE E</option>
+								<option value="ICE">ICE</option>
+								<option value="EEE">EEE</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s12">
+							<select name="workshop">
+								<option value="" disabled selected>Present for which workshop</option>
+								<option value="java">JAVA</option>
+								<option value="RNIS">RNIS</option>
+
+							</select>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s4">
+							<label>DAY</label>
+							<input value="<%=day%>" id="day" type="text" class="validate" name="day">
+						</div>
+
+						<div class="input-field col s4">
+							<label>MONTH</label>
+							<input value="<%=month%>" id="month" type="text" class="validate" name="month">
+						</div>
+
+						<div class="input-field col s4">
+							<label>YEAR</label>
+							<input value="<%=year%>" id="year" type="text" class="validate" name="year">
+						</div>
+					</div>
+					
+					<button class="btn waves-effect waves-light" type="submit">Submit
+						<i class="material-icons right">send</i>
+					</button>
+
+				</form>
+
+			</div>	
+			
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./js/materialize.min.js"></script>
+
+</body>
+</html>
