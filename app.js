@@ -13,12 +13,23 @@ var day = new Date().getDate();
 var month = new Date().getMonth()+1;
 var year = new Date().getFullYear();
 
+
+dataset = {
+  name : ["Kautuk Kundan", "Akshit Ahluwalia", "Ojasvini Luker"]
+};
+
+
+
 app.get("/home", function (req, res) {
   res.render("home",{day, month, year});
 });
 
 app.get("/success", function (req, res) {
   res.render("success",{data});
+});
+
+app.get("/people", function (req, res) {
+  res.render("attendees",{dataset});
 });
 
 app.get("/fail", function (req, res) {
@@ -34,6 +45,9 @@ app.post("/home",urlencodedParser, function (req, res) {
 
   if (data.name==='kautuk') {res.render("success",{data});}
   else {res.render("fail",{data})};
+
+  dataset.name.push(data.name);
+  console.log(dataset.name);
   
 });
 
