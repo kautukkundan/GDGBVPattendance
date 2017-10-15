@@ -38,6 +38,7 @@ app.get("/fail", function (req, res) {
 
 app.post("/home",urlencodedParser, function (req, res) {
   console.log(req.body);
+  
   var data = {
     "name" : req.body.name,
     "workshop" : req.body.workshop
